@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Mobiles - Your Trusted Mobile Store in Coimbatore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: #ffd700;
+            color: #333;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .photo-placeholder {
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            border: 2px dashed #ddd;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #667eea;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 0.5rem;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            margin-top: 2rem;
+            color: #ccc;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #667eea;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Root Mobiles</div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
+                    <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+                </ul>
+                <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <h1>Root Mobiles</h1>
+                <p>Your Trusted Mobile Store in Coimbatore</p>
+                <a href="#" class="cta-button" onclick="showPage('contact')">Visit Our Store</a>
+            </section>
+
+            <section class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>New & Pre-owned Mobiles</h3>
+                    <p>High-quality smartphones from top brands like Apple, Samsung, OnePlus, and more. All devices thoroughly tested and certified.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Fast Mobile Repairs</h3>
+                    <p>Expert repair services for display, charging ports, motherboard issues, and more. Quick turnaround with genuine parts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Genuine Accessories</h3>
+                    <p>Complete range of authentic mobile accessories including cases, chargers, headphones, and screen protectors.</p>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Why Choose Root Mobiles?</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8⭐</span>
+                        <span class="stat-label">Google Ratings</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">✅</span>
+                        <span class="stat-label">EMI via Bajaj Finserv</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">🏆</span>
+                        <span class="stat-label">Certified Repair Experts</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="photo-gallery">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Our Store & Team</h2>
+                <div class="photo-grid">
+                    <div class="photo-placeholder">Store Front Photo</div>
+                    <div class="photo-placeholder">Interior Store Photo</div>
+                    <div class="photo-placeholder">Team Photo</div>
+                    <div class="photo-placeholder">Customer Service Photo</div>
+                    <div class="photo-placeholder">Mobile Display Photo</div>
+                    <div class="photo-placeholder">Repair Service Photo</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="about" class="page">
+            <section class="hero">
+                <h1>About Root Mobiles</h1>
+                <p>Your trusted partner in mobile technology since day one</p>
+            </section>
+
+            <section class="contact-info">
+                <h2 style="margin-bottom: 2rem; color: #333;">Our Story</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    We offer high-quality new & pre-owned mobiles (Apple, Samsung, OnePlus, etc.), fast mobile repairs (display, charging, motherboard), and genuine accessories. Trusted by 5,000+ happy customers.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>4.8⭐ Google Ratings</h3>
+                        <p>Consistently rated as one of the best mobile stores in Coimbatore by our satisfied customers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>EMI via Bajaj Finserv</h3>
+                        <p>Flexible payment options to make your dream smartphone affordable with easy EMI plans.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Certified Mobile Repair Experts</h3>
+                        <p>Our skilled technicians are certified and experienced in handling all types of mobile repairs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="photo-gallery">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Meet Our Team</h2>
+                <div class="photo-grid">
+                    <div class="photo-placeholder">Team Member 1</div>
+                    <div class="photo-placeholder">Team Member 2</div>
+                    <div class="photo-placeholder">Team Member 3</div>
+                    <div class="photo-placeholder">Team Working</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="hero">
+                <h1>Contact Us</h1>
+                <p>Get in touch with Root Mobiles - We're here to help!</p>
+            </section>
+
+            <section class="contact-info">
+                <h2 style="margin-bottom: 2rem; color: #333;">Visit Our Store</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>101, GP Tower, Crosscut Road, 7th Street, Coimbatore - 641012</p>
+                            <p>No.338, Gandhipuram, 7th Street, Coimbatore, Tamil Nadu 641012</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>9443040188</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>rootmobilescoimbatore@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <h3>Social Media</h3>
+                            <div class="social-links">
+                                <a href="#">Instagram</a>
+                                <a href="#">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-info">
+                <h2 style="margin-bottom: 2rem; color: #333;">Send us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h2 style="margin-bottom: 2rem; color: #333;">Business Information</h2>
+                <p><strong>GST Number:</strong> [To be updated]</p>
+                <p><strong>Business License:</strong> [To be updated]</p>
+                <p><strong>Operating Hours:</strong> Mon-Sat 10:00 AM - 9:00 PM, Sun 11:00 AM - 8:00 PM</p>
+            </section>
+        </div>
+
+        <!-- Terms & Conditions Page -->
+        <div id="terms" class="page">
+            <section class="hero">
+                <h1>Terms & Conditions</h1>
+                <p>Please read these terms carefully before using our services</p>
+            </section>
+
+            <section class="contact-info">
+                <h2>1. General Terms</h2>
+                <p>By purchasing from or using services at Root Mobiles, you agree to be bound by these terms and conditions.</p>
+
+                <h2>2. Product Sales</h2>
+                <p>• All mobile phones are sold with manufacturer warranty where applicable<br>
+                • Pre-owned devices come with store warranty as specified<br>
+                • Prices are subject to change without notice<br>
+                • Stock availability is subject to confirmation</p>
+
+                <h2>3. Repair Services</h2>
+                <p>• Repair estimates are provided before work begins<br>
+                • We are not responsible for data loss during repairs<br>
+                • Warranty on repairs is limited to the specific service performed<br>
+                • Customer must backup data before repair service</p>
+
+                <h2>4. Returns & Exchanges</h2>
+                <p>• Returns accepted within 7 days of purchase with original receipt<br>
+                • Device must be in original condition with all accessories<br>
+                • Pre-owned devices are subject to different return policies<br>
+                • Refunds processed within 7-10 business days</p>
+
+                <h2>5. Liability</h2>
+                <p>Root Mobiles is not liable for any indirect, special, or consequential damages arising from the use of our products or services.</p>
+
+                <h2>6. Privacy</h2>
+                <p>We respect your privacy and handle your personal information according to our Privacy Policy.</p>
+
+                <h2>7. Governing Law</h2>
+                <p>These terms are governed by the laws of Tamil Nadu, India.</p>
+            </section>
+        </div>
+
+        <!-- Privacy Policy Page -->
+        <div id="privacy" class="page">
+            <section class="hero">
+                <h1>Privacy Policy</h1>
+                <p>Your privacy is important to us</p>
+            </section>
+
+            <section class="contact-info">
+                <h2>Information We Collect</h2>
+                <p>We collect information you provide directly to us, such as when you:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                    <li>Purchase products or services</li>
+                    <li>Contact us for support</li>
+                    <li>Sign up for our newsletter</li>
+                    <li>Provide feedback or reviews</li>
+                </ul>
+
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                    <li>Process transactions and provide services</li>
+                    <li>Communicate with you about your orders</li>
+                    <li>Improve our products and services</li>
+                    <li>Send promotional materials (with your consent)</li>
+                </ul>
+
+                <h2>Information Sharing</h2>
+                <p>We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                    <li>With service providers who assist in our operations</li>
+                    <li>When required by law or legal process</li>
+                    <li>To protect our rights and safety</li>
+                </ul>
+
+                <h2>Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, please contact us at:</p>
+                <p>Email: rootmobilescoimbatore@gmail.com<br>
+                Phone: 9443040188</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Root Mobiles</h3>
+                <p>Your Trusted Mobile Store in Coimbatore</p>
+                <p>Quality products, expert repairs, and exceptional service since day one.</p>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#" onclick="showPage('home')">Home</a></p>
+                <p><a href="#" onclick="showPage('about')">About Us</a></p>
+                <p><a href="#" onclick="showPage('contact')">Contact</a></p>
+                <p><a href="#" onclick="showPage('terms')">Terms & Conditions</a></p>
+                <p><a href="#" onclick="showPage('privacy')">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 101, GP Tower, Crosscut Road<br>7th Street, Coimbatore - 641012</p>
+                <p>📞 9443040188</p>
+                <p>✉️ rootmobilescoimbatore@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <p>New & Pre-owned Mobiles</p>
+                <p>Mobile Repairs</p>
+                <p>Genuine Accessories</p>
+                <p>EMI Options Available</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Root Mobiles. All rights reserved. | GST: [To be updated] | License: [To be updated]</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
