@@ -20,13 +20,13 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            color: #ffdd00;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .nav-container {
@@ -41,7 +41,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #fff;
+            color: #ffdd00;
         }
 
         .nav-menu {
@@ -51,21 +51,21 @@
         }
 
         .nav-menu a {
-            color: white;
+            color: #ffdd00;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
         }
 
         .nav-menu a:hover {
-            color: #ffd700;
+            color: #fff;
         }
 
         .mobile-menu {
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: #ffdd00;
             font-size: 1.5rem;
             cursor: pointer;
         }
@@ -93,43 +93,48 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            color: #ffdd00;
             padding: 4rem 2rem;
             text-align: center;
             margin-bottom: 3rem;
             border-radius: 10px;
+            border: 2px solid #ffdd00;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            color: #ffdd00;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            color: #fff;
         }
 
         .cta-button {
-            background: #ffd700;
-            color: #333;
+            background: #ffdd00;
+            color: #1a1a1a;
             padding: 1rem 2rem;
             border: none;
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 3px 10px rgba(255, 221, 0, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 221, 0, 0.5);
+            background: #fff;
         }
 
         /* Features Grid */
@@ -141,36 +146,47 @@
         }
 
         .feature-card {
-            background: white;
+            background: #1a1a1a;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             text-align: center;
             transition: transform 0.3s;
+            border: 2px solid #ffdd00;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 221, 0, 0.3);
         }
 
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: #ffdd00;
         }
 
         .feature-card h3 {
-            color: #333;
+            color: #ffdd00;
             margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #fff;
         }
 
         /* Stats Section */
         .stats-section {
-            background: white;
+            background: #1a1a1a;
             padding: 3rem 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             margin: 3rem 0;
+            border: 2px solid #ffdd00;
+        }
+
+        .stats-section h2 {
+            color: #ffdd00 !important;
         }
 
         .stats-grid {
@@ -187,22 +203,27 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #667eea;
+            color: #ffdd00;
             display: block;
         }
 
         .stat-label {
-            color: #666;
+            color: #fff;
             font-size: 1.1rem;
         }
 
         /* Photo Gallery */
         .photo-gallery {
-            background: white;
+            background: #1a1a1a;
             padding: 3rem 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             margin: 3rem 0;
+            border: 2px solid #ffdd00;
+        }
+
+        .photo-gallery h2 {
+            color: #ffdd00 !important;
         }
 
         .photo-grid {
@@ -214,23 +235,36 @@
 
         .photo-placeholder {
             height: 200px;
-            background: #f0f0f0;
+            background: #333;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #666;
+            color: #ffdd00;
             font-style: italic;
-            border: 2px dashed #ddd;
+            border: 2px dashed #ffdd00;
         }
 
         /* Contact Info */
         .contact-info {
-            background: white;
+            background: #1a1a1a;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             margin: 2rem 0;
+            border: 2px solid #ffdd00;
+        }
+
+        .contact-info h2 {
+            color: #ffdd00 !important;
+        }
+
+        .contact-info p {
+            color: #fff;
+        }
+
+        .contact-info ul {
+            color: #fff;
         }
 
         .contact-grid {
@@ -244,21 +278,31 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: #f8f9fa;
+            background: #333;
             border-radius: 8px;
+            border: 1px solid #ffdd00;
+        }
+
+        .contact-item h3 {
+            color: #ffdd00;
+        }
+
+        .contact-item p {
+            color: #fff;
         }
 
         .contact-icon {
             font-size: 1.5rem;
-            color: #667eea;
+            color: #ffdd00;
         }
 
         /* Footer */
         .footer {
-            background: #333;
-            color: white;
+            background: #1a1a1a;
+            color: #fff;
             padding: 3rem 2rem 1rem;
             margin-top: 4rem;
+            border-top: 3px solid #ffdd00;
         }
 
         .footer-content {
@@ -271,17 +315,17 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #ffd700;
+            color: #ffdd00;
         }
 
         .footer-section p, .footer-section a {
-            color: #ccc;
+            color: #fff;
             text-decoration: none;
             line-height: 1.8;
         }
 
         .footer-section a:hover {
-            color: #ffd700;
+            color: #ffdd00;
         }
 
         .social-links {
@@ -293,24 +337,25 @@
         .social-links a {
             display: inline-block;
             padding: 0.5rem;
-            background: #667eea;
-            color: white;
+            background: #ffdd00;
+            color: #1a1a1a;
             border-radius: 5px;
             text-decoration: none;
             transition: background 0.3s;
+            font-weight: bold;
         }
 
         .social-links a:hover {
-            background: #ffd700;
-            color: #333;
+            background: #fff;
+            color: #1a1a1a;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #555;
+            border-top: 1px solid #ffdd00;
             margin-top: 2rem;
-            color: #ccc;
+            color: #fff;
         }
 
         /* Forms */
@@ -322,23 +367,26 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            color: #333;
+            color: #ffdd00;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            border: 2px solid #ddd;
+            border: 2px solid #ffdd00;
             border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
+            background: #333;
+            color: #fff;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(255, 221, 0, 0.5);
         }
 
         .form-group textarea {
@@ -354,10 +402,11 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: #667eea;
+                background: #1a1a1a;
                 flex-direction: column;
                 padding: 1rem;
                 gap: 1rem;
+                border-top: 2px solid #ffdd00;
             }
 
             .nav-menu.active {
@@ -441,7 +490,7 @@
             </section>
 
             <section class="stats-section">
-                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Why Choose Root Mobiles?</h2>
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #ffdd00;">Why Choose Root Mobiles?</h2>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <span class="stat-number">5000+</span>
@@ -463,7 +512,7 @@
             </section>
 
             <section class="photo-gallery">
-                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Our Store & Team</h2>
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #ffdd00;">Our Store & Team</h2>
                 <div class="photo-grid">
                     <div class="photo-placeholder">Store Front Photo</div>
                     <div class="photo-placeholder">Interior Store Photo</div>
@@ -483,7 +532,7 @@
             </section>
 
             <section class="contact-info">
-                <h2 style="margin-bottom: 2rem; color: #333;">Our Story</h2>
+                <h2 style="margin-bottom: 2rem; color: #ffdd00;">Our Story</h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
                     We offer high-quality new & pre-owned mobiles (Apple, Samsung, OnePlus, etc.), fast mobile repairs (display, charging, motherboard), and genuine accessories. Trusted by 5,000+ happy customers.
                 </p>
@@ -508,7 +557,7 @@
             </section>
 
             <section class="photo-gallery">
-                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Meet Our Team</h2>
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #ffdd00;">Meet Our Team</h2>
                 <div class="photo-grid">
                     <div class="photo-placeholder">Team Member 1</div>
                     <div class="photo-placeholder">Team Member 2</div>
@@ -526,14 +575,13 @@
             </section>
 
             <section class="contact-info">
-                <h2 style="margin-bottom: 2rem; color: #333;">Visit Our Store</h2>
+                <h2 style="margin-bottom: 2rem; color: #ffdd00;">Visit Our Store</h2>
                 <div class="contact-grid">
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
                             <h3>Address</h3>
-                            <p>101, GP Tower, Crosscut Road, 7th Street, Coimbatore - 641012</p>
-                            <p>No.338, Gandhipuram, 7th Street, Coimbatore, Tamil Nadu 641012</p>
+                            <p>No.338 Gandhipuram 7th Street<br>TAMILNADU COIMBATORE, Pin 641012</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -564,7 +612,7 @@
             </section>
 
             <section class="contact-info">
-                <h2 style="margin-bottom: 2rem; color: #333;">Send us a Message</h2>
+                <h2 style="margin-bottom: 2rem; color: #ffdd00;">Send us a Message</h2>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -587,9 +635,7 @@
             </section>
 
             <section class="contact-info">
-                <h2 style="margin-bottom: 2rem; color: #333;">Business Information</h2>
-                <p><strong>GST Number:</strong> [To be updated]</p>
-                <p><strong>Business License:</strong> [To be updated]</p>
+                <h2 style="margin-bottom: 2rem; color: #ffdd00;">Business Information</h2>
                 <p><strong>Operating Hours:</strong> Mon-Sat 10:00 AM - 9:00 PM, Sun 11:00 AM - 8:00 PM</p>
             </section>
         </div>
@@ -710,7 +756,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p>📍 101, GP Tower, Crosscut Road<br>7th Street, Coimbatore - 641012</p>
+                <p>📍 No.338 Gandhipuram 7th Street<br>TAMILNADU COIMBATORE, Pin 641012</p>
                 <p>📞 9443040188</p>
                 <p>✉️ rootmobilescoimbatore@gmail.com</p>
             </div>
@@ -723,7 +769,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Root Mobiles. All rights reserved. | GST: [To be updated] | License: [To be updated]</p>
+            <p>Copyright © 2025 ROOT MOBILES. All rights reserved.</p>
         </div>
     </footer>
 
