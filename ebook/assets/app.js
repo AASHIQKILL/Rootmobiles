@@ -38,7 +38,7 @@
   const urgencyBar = b => offerOn(b) ? `<div class="urgency">🎁 Launch bonuses close in <span class="t" data-cd="inline">--</span> <a href="#buy">Get them →</a></div>` : "";
   const header = (b) => `<header class="top"><div class="wrap">
       <a class="brand" href="${root}"><span class="dot">R</span>ROOT <i>MOBILES</i></a>
-      <nav class="links">${page === "book" ? `<a href="#inside">Inside</a><a href="#languages">Languages</a><a href="#faq">FAQ</a>` : ""}<a href="${root}">All books</a>${b && isLive(b) ? `<a class="btn btn-buy" href="${buy(b).href}"${tgt(buy(b))}>BUY NOW</a>` : ""}</nav>
+      <nav class="links">${page === "book" ? `<a href="#inside">Inside</a><a href="#languages">Languages</a><a href="#faq">FAQ</a>` : ""}<a href="${root}all-books/">All books</a>${b && isLive(b) ? `<a class="btn btn-buy" href="${buy(b).href}"${tgt(buy(b))}>BUY NOW</a>` : ""}</nav>
     </div></header>`;
   const contact = () => `<section id="contact" class="soft"><div class="wrap">
     <span class="kicker">Support</span><h2>Questions? Talk to us.</h2>
